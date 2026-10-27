@@ -42,7 +42,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
+        ],
     ],
+
+    'refresh_token_days' => (int) env('REFRESH_TOKEN_DAYS', 30),
 
     /*
     |--------------------------------------------------------------------------
