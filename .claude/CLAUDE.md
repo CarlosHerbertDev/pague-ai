@@ -3,7 +3,7 @@
 - Sempre responda em português
 - Não adicione comentários no código 
 - Não faça atividades além das solicitadas 
-- Prefira respostas objetivas, sem preâmbul
+- Prefira respostas objetivas, sem preâmbulo
 
 ## Regras de Código & Padrões Laravel 12
 
@@ -29,4 +29,4 @@
 
 ### 5. Tratamento de Respostas e APIs
 - Padronize retornos de API utilizando **Eloquent API Resources**.
-- Mantenha respostas JSON limpas utilizando o padrão PascalCase ou camelCase nas 
+- Mantenha respostas JSON limpas utilizando o padrão PascalCase, camelCase ou snacke-case

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Notifications\Auth\VerifyEmailNotification;
 use Database\Factories\UserFactory;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -51,6 +52,11 @@ class User extends Authenticatable implements JWTSubject, MustVerifyEmail
     public function hasPassword(): bool
     {
         return $this->password !== null;
+    }
+
+    public function sendEmailVerificationNotification(): void
+    {
+        $this->notify(new VerifyEmailNotification());
     }
 
     public function getJWTIdentifier(): mixed
