@@ -15,11 +15,13 @@ docker compose exec php php artisan storage:link
 O entrypoint de desenvolvimento cuida sozinho do `composer install`, do `.env`
 (copiado do `.env.example`) e do `php artisan key:generate` na primeira subida.
 
-| Serviço      | URL                     |
-| ------------ | ----------------------- |
-| Aplicação    | http://localhost:8099   |
-| phpMyAdmin   | http://localhost:8098   |
-| MySQL (host) | `127.0.0.1:3310`        |
+| Serviço        | URL                     |
+| -------------- | ----------------------- |
+| Aplicação      | http://localhost:8099   |
+| phpMyAdmin     | http://localhost:8098   |
+| Mailpit (web)  | http://localhost:8097   |
+| MySQL (host)   | `127.0.0.1:3310`        |
+| Mailpit (SMTP) | `127.0.0.1:1025`        |
 
 Container da aplicação: `autenticacao_backend`.
 
