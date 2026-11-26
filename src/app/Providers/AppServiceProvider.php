@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
             ->greeting("Olá, {$notifiable->name}!")
             ->line('Clique no botão abaixo para confirmar seu e-mail.')
             ->action('Confirmar e-mail', $url)
-            ->line('O link vale por 60 minutos. Se você não criou uma conta, ignore este e-mail.'));
+            ->line('O link vale por 60 minutos. Se você não criou uma conta, ignore este e-mail.')
+            ->salutation('Equipe Pague Ai.'));
     }
 }
