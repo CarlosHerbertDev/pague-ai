@@ -18,7 +18,7 @@ final class RegisterRequest extends FormRequest
             'password' => [
                 'required',
                 'string',
-                Password::min(8)->letters()->numbers(),
+                Password::min(8)->letters()->mixedCase()->numbers()->symbols(),
             ],
             'passwordConfirmation' => ['required', 'same:password'],
         ];
@@ -36,6 +36,8 @@ final class RegisterRequest extends FormRequest
             'email.max' => 'O e-mail não pode ter mais de 255 caracteres.',
             'password.required' => 'A senha é obrigatória.',
             'password.string' => 'A senha deve ser um texto válido.',
+            'password.password.mixed' => 'A senha deve conter pelo menos uma letra maiúscula e uma minúscula.',
+            'password.password.symbols' => 'A senha deve conter pelo menos um caractere especial.',
             'passwordConfirmation.required' => 'A confirmação da senha é obrigatória.',
             'passwordConfirmation.same' => 'A confirmação da senha não corresponde à senha informada.',
         ];
